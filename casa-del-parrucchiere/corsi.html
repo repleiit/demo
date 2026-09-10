@@ -132,10 +132,10 @@ html.js .intro{display:flex}
 .mmenu.open{transform:none;visibility:visible}
 .mmenu__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.6rem}
 .mmenu__top .brand{color:var(--porcellana)}.mmenu__top .brand svg{color:var(--cipria)}.mmenu__top .brand small{color:var(--t-porc-soft)}
-.mmenu nav{display:flex;flex-direction:column;gap:1.2rem}
+.mmenu nav{display:flex;flex-direction:column;gap:1rem}
 .mmenu nav a{font-family:"Zodiak",serif;font-size:2.1rem;opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 .mmenu.open nav a{opacity:1;transform:none}
-.mmenu nav a:nth-child(1){transition-delay:.1s}.mmenu nav a:nth-child(2){transition-delay:.16s}.mmenu nav a:nth-child(3){transition-delay:.22s}.mmenu nav a:nth-child(4){transition-delay:.28s}.mmenu nav a:nth-child(5){transition-delay:.34s}.mmenu nav a:nth-child(6){transition-delay:.4s}
+.mmenu nav a:nth-child(1){transition-delay:.1s}.mmenu nav a:nth-child(2){transition-delay:.16s}.mmenu nav a:nth-child(3){transition-delay:.22s}.mmenu nav a:nth-child(4){transition-delay:.28s}.mmenu nav a:nth-child(5){transition-delay:.34s}.mmenu nav a:nth-child(6){transition-delay:.4s}.mmenu nav a:nth-child(7){transition-delay:.46s}
 .burger--x{display:flex}.burger--x span{background:#F6F0ED;transform:rotate(45deg)}.burger--x span::before{top:0;transform:rotate(90deg);background:#F6F0ED}.burger--x span::after{display:none}
 .mmenu__foot{margin-top:auto;font-size:.88rem;color:var(--t-porc-soft);display:grid;gap:.35rem}
 .mmenu__foot a{color:var(--cipria)}
@@ -451,15 +451,39 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
 .band .btn--ghost::before{background:var(--porcellana)}
 .band .btn--ghost:hover{color:var(--prugna)}
 
-/* corsi lista */
+/* corsi lista interattiva */
+.filters{display:flex;flex-wrap:wrap;gap:.35rem}
+.filters button{font-size:.82rem;font-weight:500;padding:.5rem .95rem;border-radius:100px;border:1px solid var(--line);transition:.3s}
+.filters button:hover{border-color:var(--vinaccia);color:var(--vinaccia)}
+.filters button.on{background:var(--prugna);color:var(--porcellana);border-color:var(--prugna)}
 .clist{display:grid;gap:0}
-.cl{display:grid;grid-template-columns:7rem 1fr auto;gap:1.4rem;align-items:center;padding:1.4rem 0;border-top:1px solid var(--line)}
+.cl{border-top:1px solid var(--line);cursor:pointer;transition:background .4s,padding .4s var(--ease)}
 .cl:last-child{border-bottom:1px solid var(--line)}
-.cl small{font-size:.82rem;color:var(--vinaccia);font-weight:500}
-.cl h3{font-family:"Zodiak",serif;font-weight:400;font-size:1.35rem}
-.cl p{font-size:.92rem;color:var(--t-soft);margin-top:.3rem}
-.cl .dur{font-size:.84rem;color:var(--t-soft);white-space:nowrap}
-@media(max-width:700px){.cl{grid-template-columns:1fr}.cl .dur{justify-self:start}}
+.cl.hide{display:none}
+.cl.pop{animation:popIn .5s var(--ease) both}
+@keyframes popIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.cl__head{display:grid;grid-template-columns:3rem 1fr auto 2rem;gap:1.4rem;align-items:center;padding:1.4rem 0}
+.cl__n{font-family:"Zodiak",serif;font-style:italic;font-weight:300;color:var(--t-soft);font-size:1.1rem}
+.cl small{font-size:.8rem;color:var(--vinaccia);font-weight:500}
+.cl h3{font-family:"Zodiak",serif;font-weight:400;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.15;transition:color .3s}
+.cl__head>div>p{font-size:.92rem;color:var(--t-soft);margin-top:.3rem;max-width:60ch}
+.cl__dur{font-size:.84rem;color:var(--t-soft);white-space:nowrap}
+.cl__plus{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-style:normal;transition:.4s var(--ease);justify-self:end}
+.cl:hover{background:linear-gradient(90deg,rgba(233,208,201,.35),transparent 70%)}
+.cl:hover h3,.cl.open h3{color:var(--vinaccia)}
+.cl.open .cl__plus{transform:rotate(45deg);background:var(--vinaccia);border-color:var(--vinaccia);color:var(--porcellana)}
+.cl__body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.cl.open .cl__body{grid-template-rows:1fr}
+.cl__in{overflow:hidden;display:grid;grid-template-columns:1fr 1fr auto;gap:2rem;padding:0 0 0 4.4rem;opacity:0;transition:opacity .4s,padding .4s}
+.cl.open .cl__in{padding:.2rem 0 1.8rem 4.4rem;opacity:1}
+.cl__in b{display:block;font-weight:500;font-size:.9rem;margin-bottom:.5rem}
+.cl__in ul{list-style:none;display:grid;gap:.35rem;font-size:.92rem}
+.cl__in li{display:flex;gap:.6rem;align-items:start}
+.cl__in li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--vinaccia);flex:none;margin-top:.5em}
+.cl__in p{font-size:.92rem;color:var(--t-soft)}
+.cl__cta{display:flex;flex-direction:column;gap:.5rem;align-self:end}
+.btn--sm{padding:.7rem 1.3rem;font-size:.8rem}
+@media(max-width:800px){.cl__head{grid-template-columns:2.4rem 1fr 2rem}.cl__dur{grid-column:2;justify-self:start}.cl__in{grid-template-columns:1fr;padding-left:0}.cl.open .cl__in{padding-left:0}.cl__cta{flex-direction:row}}
 
 .sec{padding:clamp(4.2rem,7.5vw,7rem) 0}
 .sec--alt{background:var(--porcellana-2)}
@@ -467,6 +491,12 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 @media(max-width:900px){.two{grid-template-columns:1fr}}
 .credit{font-size:.74rem;color:var(--t-soft);text-align:center;padding:.6rem 0 0}
+
+/* loghi marchi */
+.lgrid{display:flex;flex-wrap:wrap;gap:1rem 1.8rem;align-items:center;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.lg{display:inline-block;height:32px;background:var(--prugna);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat;opacity:.75;transition:background .35s,opacity .35s,transform .45s var(--ease)}
+.lg:hover{background:var(--vinaccia);opacity:1;transform:translateY(-2px)}
+.lgrid .lg{height:28px;max-width:120px}
 
 </style>
 <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
@@ -485,16 +515,55 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
 </div></header>
 <div class="mmenu" id="mmenu">
   <div class="mmenu__top"><span class="brand"><svg><use href="#cp-mark"/></svg><span>Casa del Parrucchiere<small>Lecco · dal 1970</small></span></span><button class="burger burger--x" id="mclose" aria-label="Chiudi menu"><span></span></button></div>
-  <nav><a href="prodotti.html">Prodotti</a><a href="parrucche.html">Parrucche</a><a href="professionisti.html">Professionisti</a><a href="corsi.html">Corsi</a><a href="chi-siamo.html">Chi siamo</a><a href="contatti.html">Contatti</a></nav>
+  <nav><a href="index.html">Home</a><a href="prodotti.html">Prodotti</a><a href="parrucche.html">Parrucche</a><a href="professionisti.html">Professionisti</a><a href="corsi.html">Corsi</a><a href="chi-siamo.html">Chi siamo</a><a href="contatti.html">Contatti</a></nav>
   <div class="mmenu__foot"><span>Viale Dante Alighieri 9, 23900 Lecco</span><a href="tel:0341365159">0341 365159</a><span>Lun–Sab 9.00–12.30 · 14.30–19.00</span></div>
 </div>
 <section class="phero"><div class="wrap">
-  <div class="rv-l"><div class="phero__crumb"><a href="index.html">Home</a><i></i><span>Corsi</span></div><h1 class="f-disp">Formazione in negozio, per chi lavora e per chi ci si vuole avvicinare.</h1><p class="lead">Corsi base e avanzati, seminari e workshop di aggiornamento. Ogni corso rilascia attestato e include il kit. Piccoli gruppi, tanta pratica.</p><div class="phero__cta"><a href="tel:0341365159" class="btn" data-mag>Chiedi il calendario<svg width="15" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13m0 0L9 1m5 5L9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a><a href="contatti.html" class="btn btn--ghost" data-mag>Scrivici</a></div></div>
+  <div class="rv-l"><div class="phero__crumb"><a href="index.html">Home</a><i></i><span>Corsi</span></div><h1 class="f-disp">Formazione in negozio, per chi lavora e per chi ci si vuole avvicinare.</h1><p class="lead">Corsi base e avanzati, seminari e workshop di aggiornamento. Ogni corso rilascia attestato e include il kit. Piccoli gruppi, tanta pratica.</p><div class="phero__cta"><a href="tel:0341365159" class="btn" data-mag>Chiedi il calendario<svg width="15" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13m0 0L9 1m5 5L9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a><a href="#iscrizione" class="btn btn--ghost" data-mag>Scrivici</a></div></div>
   <div class="rv-r" style="--d:.2s"><div class="phero__media im" data-prlx><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1400&q=72" alt="" loading="lazy" decoding="async"></div></div>
 </div></section>
 <section class="sec"><div class="wrap">
-  <div class="sec-head rv"><span class="kicker">I corsi</span><h2 class="f-disp">Dodici percorsi, dal primo livello all'aggiornamento.</h2><p class="lead">Le date si fissano al raggiungimento del gruppo: chiama o lascia il tuo nome e ti avvisiamo alla prossima edizione.</p></div>
-  <div class="clist"><div class="cl rv"><small>Unghie</small><div><h3>Ricostruzione in gel</h3><p>Dalle basi alla struttura perfetta: preparazione, applicazione, limatura e finitura.</p></div><span class="dur">1–2 giornate</span></div><div class="cl rv"><small>Unghie</small><div><h3>Acrilico e acrygel</h3><p>Tecniche di ricostruzione con acrilico e acrygel, forme e allungamento.</p></div><span class="dur">2 giornate</span></div><div class="cl rv"><small>Unghie</small><div><h3>Forme nuove</h3><p>Mandorla, ballerina, stiletto: costruzione e proporzioni.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Unghie</small><div><h3>Micropittura in gel</h3><p>Primo livello: pennelli, gel colorati, decorazione a mano libera.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Unghie</small><div><h3>Nail art gel</h3><p>Decorazioni, effetti e tendenze di stagione.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Unghie</small><div><h3>Smalto semipermanente e dip system</h3><p>Applicazione corretta, durata, rimozione senza danni.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Unghie</small><div><h3>Uso della fresa</h3><p>Sicurezza, punte, tecniche di rimozione e rifinitura.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Ciglia</small><div><h3>Applicazione ciglia singole 1:1</h3><p>Colla semipermanente, isolamento, mappatura dello sguardo.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Barba</small><div><h3>Tecniche di barba</h3><p>Rasatura tradizionale, modellatura, panno caldo, prodotti.</p></div><span class="dur">1 giornata</span></div><div class="cl rv"><small>Acconciatori</small><div><h3>Taglio moda donna e uomo</h3><p>Aggiornamento sulle tendenze di stagione, tecnica e styling.</p></div><span class="dur">1–2 giornate</span></div><div class="cl rv"><small>Acconciatori</small><div><h3>Acconciature raccolte</h3><p>Analisi e sviluppo dei raccolti per cerimonia ed eventi.</p></div><span class="dur">2 giornate</span></div><div class="cl rv"><small>Make-up</small><div><h3>Make-up base e avanzato</h3><p>Correzione, sfumature, trucco giorno e sera.</p></div><span class="dur">1 giornata</span></div></div>
+  <div class="sec-head rv" style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.5rem">
+    <div><span class="kicker">I corsi</span><h2 class="f-disp">Dodici percorsi, dal primo livello all'aggiornamento.</h2><p class="lead">Clicca un corso per vedere programma, a chi è rivolto e cosa include. Le date si fissano al raggiungimento del gruppo.</p></div>
+    <div class="filters" id="clFilters"><button class="on" data-f="all">Tutti</button><button data-f="unghie">Unghie</button><button data-f="ciglia">Ciglia</button><button data-f="barba">Barba</button><button data-f="acconciatori">Acconciatori</button><button data-f="makeup">Make-up</button></div>
+  </div>
+  <div class="clist" id="clist"><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">01</span><div><small>Unghie</small><h3>Ricostruzione in gel</h3><p>Dalle basi alla struttura perfetta: preparazione, applicazione, limatura e finitura.</p></div><span class="cl__dur">1–2 giornate</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Preparazione dell'unghia naturale</li><li>Applicazione del gel e costruzione</li><li>Limatura, finitura e sigillatura</li></ul></div><div><b>Per chi</b><p>Principianti e professioniste</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">02</span><div><small>Unghie</small><h3>Acrilico e acrygel</h3><p>Tecniche di ricostruzione con acrilico e acrygel, forme e allungamento.</p></div><span class="cl__dur">2 giornate</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Monomero, polvere e rapporto liquido</li><li>Allungamento su tip e cartina</li><li>Forme, spessori e finitura</li></ul></div><div><b>Per chi</b><p>Chi conosce già il gel</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">03</span><div><small>Unghie</small><h3>Forme nuove</h3><p>Mandorla, ballerina, stiletto: costruzione e proporzioni.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Geometrie e proporzioni</li><li>Costruzione della forma</li><li>Limatura di precisione</li></ul></div><div><b>Per chi</b><p>Professioniste</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">04</span><div><small>Unghie</small><h3>Micropittura in gel</h3><p>Primo livello: pennelli, gel colorati, decorazione a mano libera.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Pennelli e gel colorati</li><li>Sfumature e tratti</li><li>Motivi floreali di base</li></ul></div><div><b>Per chi</b><p>Tutti i livelli</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">05</span><div><small>Unghie</small><h3>Nail art gel</h3><p>Decorazioni, effetti e tendenze di stagione.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Effetti e texture</li><li>Decorazioni 3D leggere</li><li>Tendenze di stagione</li></ul></div><div><b>Per chi</b><p>Tutti i livelli</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">06</span><div><small>Unghie</small><h3>Semipermanente e dip system</h3><p>Applicazione corretta, durata, rimozione senza danni.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Preparazione e applicazione</li><li>Sistema dip</li><li>Rimozione senza danni</li></ul></div><div><b>Per chi</b><p>Principianti</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="unghie" tabindex="0">
+      <div class="cl__head"><span class="cl__n">07</span><div><small>Unghie</small><h3>Uso della fresa</h3><p>Sicurezza, punte, tecniche di rimozione e rifinitura.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Tipi di punte e velocità</li><li>Rimozione in sicurezza</li><li>Rifinitura cuticole</li></ul></div><div><b>Per chi</b><p>Professioniste</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="ciglia" tabindex="0">
+      <div class="cl__head"><span class="cl__n">08</span><div><small>Ciglia</small><h3>Applicazione ciglia singole 1:1</h3><p>Colla semipermanente, isolamento, mappatura dello sguardo.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Isolamento e applicazione 1:1</li><li>Mappatura dello sguardo</li><li>Rifinitura e mantenimento</li></ul></div><div><b>Per chi</b><p>Principianti ed estetiste</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="barba" tabindex="0">
+      <div class="cl__head"><span class="cl__n">09</span><div><small>Barba</small><h3>Tecniche di barba</h3><p>Rasatura tradizionale, modellatura, panno caldo, prodotti.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Rasatura con panno caldo</li><li>Modellatura e definizione</li><li>Prodotti pre e post</li></ul></div><div><b>Per chi</b><p>Barbieri e parrucchieri</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="acconciatori" tabindex="0">
+      <div class="cl__head"><span class="cl__n">10</span><div><small>Acconciatori</small><h3>Taglio moda donna e uomo</h3><p>Aggiornamento sulle tendenze di stagione, tecnica e styling.</p></div><span class="cl__dur">1–2 giornate</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Tendenze di stagione</li><li>Tecnica di taglio</li><li>Styling e finish</li></ul></div><div><b>Per chi</b><p>Acconciatori</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="acconciatori" tabindex="0">
+      <div class="cl__head"><span class="cl__n">11</span><div><small>Acconciatori</small><h3>Acconciature raccolte</h3><p>Analisi e sviluppo dei raccolti per cerimonia ed eventi.</p></div><span class="cl__dur">2 giornate</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Preparazione e texture</li><li>Costruzione del raccolto</li><li>Varianti cerimonia</li></ul></div><div><b>Per chi</b><p>Acconciatori</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div><div class="cl rv" data-cat="makeup" tabindex="0">
+      <div class="cl__head"><span class="cl__n">12</span><div><small>Make-up</small><h3>Make-up base e avanzato</h3><p>Correzione, sfumature, trucco giorno e sera.</p></div><span class="cl__dur">1 giornata</span><i class="cl__plus">+</i></div>
+      <div class="cl__body"><div class="cl__in"><div><b>Programma</b><ul><li>Base e correzione</li><li>Occhi e sfumature</li><li>Giorno e sera</li></ul></div><div><b>Per chi</b><p>Tutti i livelli</p><b style="margin-top:1rem">Cosa include</b><p>Kit prodotti, attestato di partecipazione, condizioni dedicate sui prodotti usati.</p></div><div class="cl__cta"><a href="tel:0341365159" class="btn btn--sm" data-mag>Chiedi le date</a><a href="#iscrizione" class="btn btn--ghost btn--sm">Iscriviti</a></div></div></div>
+    </div></div>
 </div></section>
 
 <section class="sec sec--alt"><div class="wrap">
@@ -506,7 +575,7 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
   </div>
 </div></section>
 
-<section class="sec"><div class="wrap"><div class="two">
+<section class="sec" id="iscrizione"><div class="wrap"><div class="two">
   <div class="rv-l"><div class="dept__media im im--warm" data-prlx><img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=1200&q=72" alt="Corso ciglia" loading="lazy" decoding="async"></div></div>
   <div class="rv-r"><form class="form" novalidate><div class="body">
   <h3>Iscriviti o chiedi le date</h3><p class="lead">Dicci quale corso ti interessa e se sei già del mestiere: ti richiamiamo con date e dettagli.</p>
@@ -600,6 +669,11 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
   /* subnav ancore */
   var sub=$$('.subnav a'),secs=sub.map(function(a){return $(a.getAttribute('href'))});
   function subnav(){if(!sub||!sub.length)return;var y=w.scrollY+180,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});sub.forEach(function(a,i){a.classList.toggle('cur',i===cur)})}
+
+  /* corsi pagina: lista accordion + filtri */
+  var cls=$$('#clist .cl');
+  cls.forEach(function(c){c.addEventListener('click',function(e){if(e.target.closest('a'))return;var was=c.classList.contains('open');cls.forEach(function(x){x.classList.remove('open')});if(!was)c.classList.add('open')});c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click()}})});
+  $$('#clFilters button').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;$$('#clFilters button').forEach(function(x){x.classList.toggle('on',x===b)});cls.forEach(function(c,i){var show=f==='all'||c.dataset.cat===f;c.classList.remove('pop','open');c.classList.toggle('hide',!show);if(show){c.style.animationDelay=(i*0.04)+'s';void c.offsetWidth;c.classList.add('pop')}})})});
 
   /* magnetici */
   if(fine&&!reduce){$$('[data-mag]').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})})}
