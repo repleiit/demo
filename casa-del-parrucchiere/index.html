@@ -875,8 +875,7 @@ body{position:relative}
   var intro=d.getElementById('intro'),hero=d.getElementById('hero');
   function startHero(){hero.classList.add('go')}
   function killIntro(){if(intro.classList.contains('done'))return;intro.classList.add('done');startHero();setTimeout(function(){intro.classList.add('gone')},1100)}
-  var seen=false;try{seen=!!sessionStorage.getItem('cdp-intro');sessionStorage.setItem('cdp-intro','1')}catch(e){}
-  if(reduce||seen){intro.classList.add('done');intro.classList.add('gone');startHero()}
+  if(reduce){intro.classList.add('done');intro.classList.add('gone');startHero()}
   else{w.addEventListener('load',function(){setTimeout(killIntro,1500)});setTimeout(killIntro,2800)}
   w.addEventListener('pageshow',function(e){if(e.persisted)killIntro()});
   intro.addEventListener('click',killIntro);
