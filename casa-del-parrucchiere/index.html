@@ -371,6 +371,14 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
   .rep__it.on{padding-left:0}
 }
 
+/* ---------- intro: fix chiusura ---------- */
+html.js .intro.gone{display:none!important}
+html.js .intro.done{pointer-events:none}
+
+/* ---------- intro: fix chiusura ---------- */
+html.js .intro.gone{display:none!important}
+html.js .intro.done{pointer-events:none}
+
 /* ---------- marchi: loghi ---------- */
 .mq__t{animation-duration:90s;align-items:center}
 .mq--rev .mq__t{animation-duration:105s}
@@ -867,8 +875,11 @@ body{position:relative}
   var intro=d.getElementById('intro'),hero=d.getElementById('hero');
   function startHero(){hero.classList.add('go')}
   function killIntro(){if(intro.classList.contains('done'))return;intro.classList.add('done');startHero();setTimeout(function(){intro.classList.add('gone')},1100)}
-  if(reduce||sessionStorage.getItem('cdp-intro')){intro.classList.add('gone');startHero()}
-  else{sessionStorage.setItem('cdp-intro','1');w.addEventListener('load',function(){setTimeout(killIntro,1500)});setTimeout(killIntro,2800)}
+  var seen=false;try{seen=!!sessionStorage.getItem('cdp-intro');sessionStorage.setItem('cdp-intro','1')}catch(e){}
+  if(reduce||seen){intro.classList.add('done');intro.classList.add('gone');startHero()}
+  else{w.addEventListener('load',function(){setTimeout(killIntro,1500)});setTimeout(killIntro,2800)}
+  w.addEventListener('pageshow',function(e){if(e.persisted)killIntro()});
+  intro.addEventListener('click',killIntro);
 
   /* hero split parola per parola */
   var h1=d.getElementById('heroH1');
