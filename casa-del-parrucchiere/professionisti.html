@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per professionisti — forniture per saloni, centri estetici e barber shop | Casa del Parrucchiere Lecco</title>
+<meta name="description" content="Forniture professionali a Lecco per parrucchieri, centri estetici e barber shop: offerte su quantità, marchi in esclusiva, arredo saloni, corsi con attestato.">
+<meta name="theme-color" content="#5E262E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,400i,300,300i&f[]=switzer@400,500,600&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   CASA DEL PARRUCCHIERE — Lecco, dal 1970 · design system
+   Display: Zodiak · Body: Switzer
+   Porcellana #F6F0ED · Prugna #221417 · Vinaccia #A7545A (colore del logo)
+============================================================ */
+:root{
+  --porcellana:#F6F0ED;
+  --porcellana-2:#EFE4DF;
+  --cipria:#E9D0C9;
+  --cipria-2:#D9B3AB;
+  --vinaccia:#A7545A;
+  --vinaccia-d:#8A3F46;
+  --vino:#5E262E;
+  --vino-d:#46191F;
+  --prugna:#221417;
+  --oro:#B99562;
+  --t-strong:#221417;
+  --t-soft:#7A6265;
+  --t-porc:#F6F0ED;
+  --t-porc-soft:rgba(246,240,237,.64);
+  --line:rgba(34,20,23,.13);
+  --line-d:rgba(246,240,237,.16);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --shadow:0 34px 70px -34px rgba(34,20,23,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--porcellana);color:var(--t-strong);font-family:"Switzer",system-ui,sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+::selection{background:var(--vinaccia);color:var(--porcellana)}
+:focus-visible{outline:2px solid var(--vinaccia);outline-offset:3px;border-radius:2px}
+.wrap{width:min(1240px,calc(100% - 2.5rem));margin-inline:auto}
+@media(min-width:1024px){.wrap{width:min(1240px,calc(100% - 6rem))}}
+
+/* ---------- type ---------- */
+.f-disp{font-family:"Zodiak",Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.05}
+.f-it{font-family:"Zodiak",Georgia,serif;font-style:italic;font-weight:300}
+.lead{font-size:1.08rem;color:var(--t-soft);max-width:54ch}
+.sec-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
+.sec-head h2{font-size:clamp(2.2rem,4.6vw,3.7rem);max-width:20ch}
+.sec-head p{margin-top:1rem}
+.on-dark .sec-head h2{color:var(--t-porc)}
+.on-dark .lead{color:var(--t-porc-soft)}
+.kicker{display:inline-flex;align-items:center;gap:.7rem;font-size:.82rem;font-weight:500;color:var(--vinaccia);margin-bottom:1rem}
+.kicker::before{content:"";width:28px;height:1px;background:var(--vinaccia)}
+.on-dark .kicker{color:var(--cipria-2)}.on-dark .kicker::before{background:var(--cipria-2)}
+
+/* ---------- reveal (visibile senza JS) ---------- */
+html.js .rv{opacity:0;transform:translateY(28px);transition:opacity .95s var(--ease),transform .95s var(--ease);transition-delay:var(--d,0s)}
+html.js .rv.in{opacity:1;transform:none}
+html.js .rv-l{opacity:0;transform:translateX(-36px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+html.js .rv-l.in{opacity:1;transform:none}
+html.js .rv-r{opacity:0;transform:translateX(36px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+html.js .rv-r.in{opacity:1;transform:none}
+
+/* ---------- placeholder immagini (da sostituire) ---------- */
+.ph{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,var(--porcellana-2) 0%,var(--cipria) 55%,var(--cipria-2) 100%);isolation:isolate}
+.ph::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(115deg,rgba(34,20,23,0) 0 14px,rgba(34,20,23,.035) 14px 15px);mix-blend-mode:multiply}
+.ph .ph__mark{position:absolute;width:46%;left:50%;top:50%;transform:translate(-50%,-50%);color:rgba(94,38,46,.18)}
+.ph .ph__lbl{position:absolute;left:1rem;bottom:.9rem;max-width:60%;line-height:1.3;font-family:"Zodiak",serif;font-style:italic;font-size:.9rem;color:rgba(94,38,46,.6)}
+.ph--dark{background:linear-gradient(135deg,var(--vino) 0%,var(--vino-d) 60%,#33121a 100%)}
+.ph--dark .ph__mark{color:rgba(246,240,237,.12)}.ph--dark .ph__lbl{color:rgba(246,240,237,.5)}
+
+/* ---------- intro ---------- */
+.intro{position:fixed;inset:0;z-index:9000;background:var(--prugna);display:none;align-items:center;justify-content:center;flex-direction:column;gap:1.4rem;transition:transform 1s var(--ease)}
+html.js .intro{display:flex}
+.intro.done{transform:translateY(-101%)}
+.intro.gone{display:none}
+.intro__mark{width:min(220px,44vw);color:var(--cipria)}
+.intro__mark path{fill:transparent;stroke:var(--cipria);stroke-width:2.2;stroke-dasharray:4200;stroke-dashoffset:4200;animation:draw 1.5s var(--ease) .1s forwards,fillin .6s ease 1.25s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillin{to{fill:var(--cipria)}}
+.intro__txt{font-family:"Zodiak",serif;font-style:italic;font-weight:300;color:var(--t-porc-soft);font-size:1rem;letter-spacing:.06em;opacity:0;animation:fadein .7s ease 1s forwards}
+@keyframes fadein{to{opacity:1}}
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--vinaccia);z-index:600}
+
+/* ---------- topbar + nav ---------- */
+.topbar{background:var(--prugna);color:var(--t-porc-soft);font-size:.78rem}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:40px}
+.topbar__l,.topbar__r{display:flex;align-items:center;gap:1.6rem}
+.topbar a:hover{color:var(--cipria)}
+.topbar b{color:var(--cipria);font-weight:500}
+.topbar span,.topbar a{display:inline-flex;align-items:center;gap:.45rem}
+.topbar svg{color:var(--cipria-2)}
+@media(max-width:1023px){.topbar{display:none}}
+.nav{position:sticky;top:0;z-index:500;transition:background .45s,box-shadow .45s}
+.nav.scrolled{background:rgba(246,240,237,.9);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px}
+.brand{display:inline-flex;align-items:center;gap:.85rem}
+.brand svg{width:54px;color:var(--vinaccia)}
+.brand span{font-family:"Zodiak",serif;font-size:1.05rem;line-height:1.05;letter-spacing:.02em}
+.brand span small{display:block;font-family:"Switzer",sans-serif;font-size:.7rem;color:var(--t-soft);letter-spacing:.06em;margin-top:.15rem}
+.nav__links{display:flex;gap:2.2rem;font-size:.86rem;font-weight:500}
+.nav__links a{position:relative;padding:.3rem 0}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1.5px;background:var(--vinaccia);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:1023px){.nav__links{display:none}}
+.nav__right{display:flex;align-items:center;gap:.8rem}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.burger span{position:relative;width:26px;height:2px;background:var(--prugna)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:26px;height:2px;background:var(--prugna)}
+.burger span::before{top:-8px}.burger span::after{top:8px}
+@media(max-width:1023px){.burger{display:flex}.nav .btn{display:none}}
+
+.btn{position:relative;display:inline-flex;align-items:center;gap:.7rem;background:var(--vinaccia);color:var(--porcellana);font-weight:500;font-size:.88rem;padding:.95rem 1.7rem;border-radius:100px;overflow:hidden;transition:color .4s;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--prugna);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease);z-index:-1}
+.btn:hover::before{transform:scaleY(1)}
+.btn svg{transition:transform .4s var(--ease)}.btn:hover svg{transform:translateX(4px)}
+.btn--ghost{background:transparent;color:var(--prugna);border:1px solid var(--line)}
+.btn--ghost:hover{color:var(--porcellana)}
+.btn--porc{background:var(--porcellana);color:var(--prugna)}
+.btn--porc::before{background:var(--vinaccia)}.btn--porc:hover{color:var(--porcellana)}
+
+.mmenu{position:fixed;inset:0;z-index:700;background:var(--prugna);color:var(--porcellana);display:flex;flex-direction:column;padding:1.3rem 1.5rem 2.4rem;transform:translateX(100%);transition:transform .6s var(--ease);visibility:hidden}
+.mmenu.open{transform:none;visibility:visible}
+.mmenu__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2.6rem}
+.mmenu__top .brand{color:var(--porcellana)}.mmenu__top .brand svg{color:var(--cipria)}.mmenu__top .brand small{color:var(--t-porc-soft)}
+.mmenu nav{display:flex;flex-direction:column;gap:1.2rem}
+.mmenu nav a{font-family:"Zodiak",serif;font-size:2.1rem;opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.mmenu.open nav a{opacity:1;transform:none}
+.mmenu nav a:nth-child(1){transition-delay:.1s}.mmenu nav a:nth-child(2){transition-delay:.16s}.mmenu nav a:nth-child(3){transition-delay:.22s}.mmenu nav a:nth-child(4){transition-delay:.28s}.mmenu nav a:nth-child(5){transition-delay:.34s}.mmenu nav a:nth-child(6){transition-delay:.4s}
+.burger--x{display:flex}.burger--x span{background:#F6F0ED;transform:rotate(45deg)}.burger--x span::before{top:0;transform:rotate(90deg);background:#F6F0ED}.burger--x span::after{display:none}
+.mmenu__foot{margin-top:auto;font-size:.88rem;color:var(--t-porc-soft);display:grid;gap:.35rem}
+.mmenu__foot a{color:var(--cipria)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(2.4rem,5vw,4.5rem) 0 clamp(3rem,6vw,5.5rem);overflow:hidden}
+.hero__bg{position:absolute;right:-8%;top:-6%;width:min(62vw,760px);color:var(--cipria);opacity:.55;z-index:0;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2.4rem,5vw,5rem);align-items:center}
+.hero h1{font-size:clamp(2.7rem,6.2vw,5.3rem);max-width:12ch}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero h1 .w i{display:inline-block;font-style:inherit;transform:translateY(105%);transition:transform 1.05s var(--ease)}
+html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
+.hero__sub{margin-top:1.5rem;font-size:1.12rem;color:var(--t-soft);max-width:48ch}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero__meta{margin-top:2.4rem;display:flex;align-items:center;gap:1rem;font-size:.9rem;color:var(--t-soft)}
+.hero__meta .stars{color:var(--oro);letter-spacing:.08em}
+.hero__meta b{color:var(--prugna);font-weight:600}
+.hero__media{position:relative}
+.hero__frame{position:relative;aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;box-shadow:var(--shadow)}
+.hero__tag{position:absolute;left:1.2rem;bottom:1.2rem;background:var(--porcellana);padding:.9rem 1.2rem;border-radius:12px;display:flex;align-items:baseline;gap:.6rem;box-shadow:0 12px 30px -14px rgba(34,20,23,.4)}
+.hero__tag b{font-family:"Zodiak",serif;font-size:1.8rem;font-weight:400;color:var(--vinaccia);line-height:1}
+.hero__tag span{font-size:.82rem;color:var(--t-soft)}
+.hero__pill{position:absolute;right:-1rem;top:14%;background:var(--prugna);color:var(--porcellana);padding:.75rem 1rem;border-radius:100px;font-size:.8rem;display:inline-flex;gap:.5rem;align-items:center;box-shadow:var(--shadow)}
+.hero__pill i{width:8px;height:8px;border-radius:50%;background:#7CC89A;box-shadow:0 0 0 0 rgba(124,200,154,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(124,200,154,0)}100%{box-shadow:0 0 0 0 rgba(124,200,154,0)}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero__media{max-width:520px}.hero__pill{right:0}.hero__bg{width:90vw;right:-30%;top:-4%}}
+
+/* ---------- trust strip ---------- */
+.trust{border-block:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust__i{padding:1.6rem 1.4rem;border-left:1px solid var(--line)}
+.trust__i:first-child{border-left:0;padding-left:0}
+.trust__i b{display:block;font-family:"Zodiak",serif;font-weight:400;font-size:2rem;line-height:1;color:var(--prugna)}
+.trust__i b small{font-size:1rem;color:var(--oro);margin-left:.2rem}
+.trust__i>span{display:block;margin-top:.45rem;font-size:.86rem;color:var(--t-soft)}
+@media(max-width:820px){.trust .wrap{grid-template-columns:1fr 1fr}.trust__i:nth-child(3){border-left:0;padding-left:0}.trust__i:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---------- reparti ---------- */
+.rep{padding:clamp(4.5rem,8vw,7.5rem) 0}
+.rep__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:start}
+.rep__list{display:flex;flex-direction:column}
+.rep__it{display:grid;grid-template-columns:6.2rem 1fr auto;align-items:center;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--line);cursor:pointer;transition:padding .45s var(--ease)}
+.rep__it:last-child{border-bottom:1px solid var(--line)}
+.rep__it em{font-family:"Zodiak",serif;font-style:italic;font-size:.9rem;color:var(--t-soft);font-weight:300}
+.rep__it h3{font-family:"Zodiak",serif;font-weight:400;font-size:clamp(1.35rem,2.4vw,1.9rem);line-height:1.15;transition:color .35s}
+.rep__it p{grid-column:2/4;font-size:.94rem;color:var(--t-soft);max-height:0;overflow:hidden;opacity:0;transition:max-height .55s var(--ease),opacity .45s,margin .45s}
+.rep__it svg{color:var(--vinaccia);opacity:0;transform:translateX(-8px);transition:.4s var(--ease)}
+.rep__it.on{padding-left:.6rem}
+.rep__it.on h3{color:var(--vinaccia)}
+.rep__it.on p{max-height:120px;opacity:1;margin-top:.35rem}
+.rep__it.on svg{opacity:1;transform:none}
+.rep__media{position:sticky;top:110px}
+.rep__frame{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.rep__frame .ph{position:absolute;inset:0;opacity:0;transform:scale(1.04);transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
+.rep__frame .ph.on{opacity:1;transform:none}
+.rep__count{position:absolute;right:1.2rem;top:1.2rem;background:var(--porcellana);border-radius:100px;padding:.5rem .9rem;font-size:.8rem;font-weight:500}
+@media(max-width:560px){.rep__it{grid-template-columns:1fr auto}.rep__it em{grid-column:1/3}.rep__it p{grid-column:1/3}}
+@media(max-width:900px){.rep__grid{grid-template-columns:1fr}.rep__media{position:relative;top:0;order:-1;max-width:460px}.rep__frame{aspect-ratio:4/3}}
+
+/* ---------- parrucche ---------- */
+.par{background:var(--vino);color:var(--porcellana);padding:clamp(4.5rem,8vw,7.5rem) 0;position:relative;overflow:hidden}
+.par::after{content:"";position:absolute;width:60vw;height:60vw;max-width:800px;max-height:800px;border-radius:50%;background:radial-gradient(circle,rgba(167,84,90,.45),transparent 62%);right:-20%;bottom:-40%;pointer-events:none}
+.par .wrap{position:relative;z-index:1;display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2.4rem,5vw,5rem);align-items:center}
+.par h2{font-size:clamp(2.2rem,4.4vw,3.6rem);max-width:16ch}
+.par p.lead{color:var(--t-porc-soft)}
+.par__pts{margin-top:2rem;display:grid;gap:1.1rem}
+.par__pt{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;padding-top:1.1rem;border-top:1px solid var(--line-d)}
+.par__pt svg{color:var(--cipria);margin-top:.15rem}
+.par__pt b{display:block;font-weight:500;font-size:1rem}
+.par__pt span{font-size:.9rem;color:var(--t-porc-soft)}
+.par__media{position:relative}
+.par__frame{aspect-ratio:1/1;border-radius:18px 220px 18px 18px;overflow:hidden;position:relative}
+.par__ce{position:absolute;left:1.2rem;bottom:1.2rem;background:var(--porcellana);color:var(--prugna);padding:1rem 1.2rem;border-radius:12px;max-width:260px;font-size:.84rem;line-height:1.45;box-shadow:var(--shadow)}
+.par__ce b{display:block;font-family:"Zodiak",serif;font-weight:400;font-size:1.25rem;color:var(--vinaccia);margin-bottom:.2rem}
+@media(max-width:900px){.par .wrap{grid-template-columns:1fr}.par__media{order:-1;max-width:520px}}
+
+/* ---------- marchi ---------- */
+.brands{padding:clamp(3.5rem,6vw,5.5rem) 0;overflow:hidden}
+.brands .sec-head{text-align:center}.brands .sec-head h2,.brands .sec-head p{margin-inline:auto}
+.mq{display:flex;overflow:hidden;gap:0;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq+.mq{margin-top:.6rem}
+.mq__t{display:flex;flex:none;gap:0;animation:mq 46s linear infinite}
+.mq--rev .mq__t{animation-direction:reverse;animation-duration:54s}
+.mq:hover .mq__t{animation-play-state:paused}
+.mq__t span{flex:none;font-family:"Zodiak",serif;font-size:clamp(1.5rem,3vw,2.4rem);padding:.4rem 1.6rem;color:var(--prugna);white-space:nowrap}
+.mq__t span:nth-child(even){font-style:italic;font-weight:300;color:var(--vinaccia)}
+.mq__t span::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--oro);margin-left:3.2rem;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+.brands__note{text-align:center;margin-top:2rem;font-size:.9rem;color:var(--t-soft)}
+
+/* ---------- professionisti ---------- */
+.pro{padding:clamp(4.5rem,8vw,7.5rem) 0;background:var(--porcellana-2)}
+.pro__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.4rem,5vw,5rem);align-items:center}
+.pro__cols{display:grid;gap:0}
+.pro__c{padding:1.5rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start}
+.pro__c:last-child{border-bottom:1px solid var(--line)}
+.pro__c svg{color:var(--vinaccia);margin-top:.2rem}
+.pro__c h3{font-family:"Zodiak",serif;font-weight:400;font-size:1.45rem;line-height:1.15}
+.pro__c p{margin-top:.4rem;color:var(--t-soft);font-size:.95rem}
+.pro__frame{aspect-ratio:4/5;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);position:relative}
+@media(max-width:900px){.pro__grid{grid-template-columns:1fr}.pro__frame{aspect-ratio:4/3;max-width:520px}}
+
+/* ---------- corsi ---------- */
+.corsi{padding:clamp(4.5rem,8vw,7.5rem) 0}
+.corsi__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.corso{background:var(--porcellana-2);border-radius:16px;padding:1.6rem 1.5rem 1.5rem;display:flex;flex-direction:column;min-height:260px;transition:transform .5s var(--ease),background .4s}
+.corso:hover{background:var(--cipria);transform:translateY(-4px)}
+.corso small{font-size:.8rem;color:var(--vinaccia);font-weight:500}
+.corso h3{font-family:"Zodiak",serif;font-weight:400;font-size:1.5rem;line-height:1.15;margin-top:.6rem}
+.corso p{margin-top:.6rem;font-size:.92rem;color:var(--t-soft);flex:1}
+.corso span{margin-top:1.2rem;font-size:.84rem;display:inline-flex;align-items:center;gap:.5rem}
+.corso span svg{color:var(--vinaccia)}
+.corsi__foot{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;padding-top:1.6rem;border-top:1px solid var(--line);color:var(--t-soft);font-size:.95rem}
+@media(max-width:1000px){.corsi__grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.corsi__grid{grid-template-columns:1fr}.corso{min-height:0}}
+
+/* ---------- storia ---------- */
+.storia{background:var(--prugna);color:var(--porcellana);padding:clamp(4.5rem,8vw,7.5rem) 0;overflow:hidden;position:relative}
+.storia__mark{position:absolute;left:-6%;bottom:-18%;width:min(56vw,620px);color:rgba(246,240,237,.045);pointer-events:none}
+.storia .wrap{position:relative;z-index:1}
+.storia__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.4rem,5vw,5rem);align-items:start}
+.storia h2{font-size:clamp(2.2rem,4.4vw,3.6rem)}
+.storia .lead{color:var(--t-porc-soft);margin-top:1rem}
+.tl{display:grid;gap:0;margin-top:.5rem}
+.tl__i{display:grid;grid-template-columns:5.2rem 1fr;gap:1.2rem;padding:1.4rem 0;border-top:1px solid var(--line-d);position:relative}
+.tl__i:last-child{border-bottom:1px solid var(--line-d)}
+.tl__i b{font-family:"Zodiak",serif;font-weight:400;font-size:1.7rem;color:var(--cipria);line-height:1}
+.tl__i h3{font-weight:500;font-size:1.05rem}
+.tl__i p{margin-top:.35rem;font-size:.94rem;color:var(--t-porc-soft)}
+.storia__frames{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.storia__frames .ph{border-radius:14px}
+.storia__frames .ph:first-child{aspect-ratio:3/4;grid-row:span 2}
+.storia__frames .ph:nth-child(2){aspect-ratio:4/3}
+.storia__frames .ph:nth-child(3){aspect-ratio:4/3;margin-top:-1rem}
+@media(max-width:900px){.storia__grid{grid-template-columns:1fr}}
+
+/* ---------- recensioni ---------- */
+.rec{padding:clamp(4.5rem,8vw,7.5rem) 0}
+.rec__head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:1.4rem;margin-bottom:2.6rem}
+.rec__score{display:flex;align-items:center;gap:1rem;padding:1rem 1.3rem;border:1px solid var(--line);border-radius:14px}
+.rec__score b{font-family:"Zodiak",serif;font-weight:400;font-size:2.4rem;line-height:1}
+.rec__score .stars{color:var(--oro);letter-spacing:.1em;display:block}
+.rec__score small{display:block;font-size:.8rem;color:var(--t-soft)}
+.rec__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.rev{background:var(--porcellana-2);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:1rem;min-height:230px}
+.rev q{font-family:"Zodiak",serif;font-style:italic;font-weight:300;font-size:1.15rem;line-height:1.35;quotes:"“" "”";flex:1}
+.rev q.todo{color:var(--t-soft)}
+.rev footer{display:flex;align-items:center;gap:.8rem;font-size:.85rem}
+.rev footer i{width:34px;height:34px;border-radius:50%;background:var(--cipria);display:grid;place-items:center;font-style:normal;font-weight:600;color:var(--vino);font-size:.8rem}
+.rev footer span{color:var(--t-soft);display:block;font-size:.78rem}
+@media(max-width:900px){.rec__grid{grid-template-columns:1fr}}
+
+/* ---------- contatti ---------- */
+.con{padding:clamp(4.5rem,8vw,7.5rem) 0;background:var(--porcellana-2)}
+.con__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
+.con__info h2{font-size:clamp(2.2rem,4.4vw,3.4rem)}
+.con__block{margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start}
+.con__block svg{color:var(--vinaccia);margin-top:.2rem}
+.con__block b{display:block;font-weight:500}
+.con__block p{color:var(--t-soft);font-size:.95rem}
+.con__block a.tel{font-family:"Zodiak",serif;font-size:1.5rem;color:var(--prugna)}
+.hours{display:grid;gap:.3rem;font-size:.92rem;margin-top:.3rem}
+.hours div{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--line);padding:.3rem 0}
+.hours div:last-child{border:0}
+.hours span:first-child{color:var(--t-soft)}
+.hours div.today span{color:var(--vinaccia);font-weight:500}
+.map{margin-top:1.6rem;border-radius:16px;overflow:hidden;aspect-ratio:16/8;background:var(--cipria);filter:saturate(.7) contrast(1.05)}
+.map iframe{width:100%;height:100%;border:0}
+.form{background:var(--porcellana);border-radius:18px;padding:clamp(1.5rem,3vw,2.4rem);box-shadow:var(--shadow)}
+.form h3{font-family:"Zodiak",serif;font-weight:400;font-size:1.7rem}
+.form p.lead{font-size:.95rem;margin-top:.4rem}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:.9rem}
+.form .row.one{grid-template-columns:1fr}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-size:.8rem;color:var(--t-soft)}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:.85rem .95rem;font:inherit;font-size:.95rem;color:var(--prugna);transition:border-color .3s,box-shadow .3s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--vinaccia);box-shadow:0 0 0 4px rgba(167,84,90,.14)}
+.field textarea{min-height:110px;resize:vertical}
+.form .btn{margin-top:1.2rem;width:100%;justify-content:center}
+.form small{display:block;margin-top:.8rem;font-size:.78rem;color:var(--t-soft);text-align:center}
+.form .ok{display:none;padding:2rem 0;text-align:center}
+.form.sent .ok{display:block}.form.sent .body{display:none}
+.form .ok b{display:block;font-family:"Zodiak",serif;font-weight:400;font-size:1.6rem;margin-bottom:.5rem}
+@media(max-width:900px){.con__grid{grid-template-columns:1fr}.form .row{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+.foot{background:var(--prugna);color:var(--t-porc-soft);padding:3.4rem 0 1.8rem;font-size:.88rem}
+.foot__top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.4rem;padding-bottom:2.4rem;border-bottom:1px solid var(--line-d)}
+.foot .brand{color:var(--porcellana)}.foot .brand svg{color:var(--cipria)}.foot .brand small{color:var(--t-porc-soft)}
+.foot__top p{margin-top:1rem;max-width:36ch}
+.foot h4{font-weight:500;color:var(--porcellana);margin-bottom:.8rem;font-size:.9rem}
+.foot ul{list-style:none;display:grid;gap:.45rem}
+.foot a:hover{color:var(--cipria)}
+.foot__bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;padding-top:1.4rem;font-size:.8rem}
+@media(max-width:800px){.foot__top{grid-template-columns:1fr}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html.js .rv,html.js .rv-l,html.js .rv-r{opacity:1;transform:none}
+  .hero h1 .w i{transform:none}
+}
+
+/* ============================================================
+   MULTI-PAGE — aggiunte
+============================================================ */
+/* immagini reali dentro i frame */
+.im{position:relative;overflow:hidden;background:var(--cipria)}
+.im img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.02);transition:transform 1.2s var(--ease)}
+.im:hover img{transform:scale(1.06)}
+.im--tint::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,20,23,0) 45%,rgba(34,20,23,.55));pointer-events:none}
+.im--warm img{filter:saturate(.88) contrast(1.02)}
+.hero__frame.im img,.rep__frame .im img{transform:none}
+.rep__frame .im{position:absolute;inset:0;opacity:0;transform:scale(1.04);transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
+.rep__frame .im.on{opacity:1;transform:none}
+.nav__links a.cur{color:var(--vinaccia)}
+.nav__links a.cur::after{transform:scaleX(1);transform-origin:left}
+
+/* page hero (pagine interne) */
+.phero{position:relative;padding:clamp(2.6rem,5vw,4.6rem) 0 clamp(2.4rem,4vw,3.6rem);overflow:hidden}
+.phero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:end}
+.phero h1{font-size:clamp(2.6rem,5.6vw,4.6rem);max-width:14ch}
+.phero .lead{margin-top:1.3rem;font-size:1.1rem}
+.phero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.phero__media{aspect-ratio:4/3;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.phero__media.tall{aspect-ratio:4/5;border-radius:220px 220px 18px 18px}
+.phero__crumb{font-size:.82rem;color:var(--t-soft);margin-bottom:1.4rem;display:flex;gap:.6rem;align-items:center}
+.phero__crumb a:hover{color:var(--vinaccia)}
+.phero__crumb i{width:4px;height:4px;border-radius:50%;background:var(--cipria-2)}
+@media(max-width:900px){.phero .wrap{grid-template-columns:1fr}.phero__media{max-width:560px}.phero__media.tall{aspect-ratio:4/3;border-radius:18px}}
+
+/* sub-nav ancore (pagina prodotti) */
+.subnav{position:sticky;top:82px;z-index:400;background:rgba(246,240,237,.9);backdrop-filter:blur(12px);border-block:1px solid var(--line)}
+.subnav .wrap{display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;padding-block:.6rem}
+.subnav .wrap::-webkit-scrollbar{display:none}
+.subnav a{flex:none;font-size:.84rem;font-weight:500;padding:.5rem .95rem;border-radius:100px;border:1px solid transparent;transition:.3s}
+.subnav a:hover{border-color:var(--line)}
+.subnav a.cur{background:var(--prugna);color:var(--porcellana)}
+
+/* reparti in profondità */
+.dept{padding:clamp(3.6rem,7vw,6rem) 0;border-top:1px solid var(--line)}
+.dept:first-of-type{border-top:0}
+.dept .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.dept:nth-of-type(even) .dept__media{order:-1}
+.dept h2{font-size:clamp(2rem,4vw,3.1rem)}
+.dept__media{aspect-ratio:4/3;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.dept__media.sq{aspect-ratio:1/1}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
+.chips span{font-size:.82rem;padding:.42rem .8rem;border:1px solid var(--line);border-radius:100px;color:var(--t-strong);background:rgba(255,255,255,.35)}
+.chips span.more{border-style:dashed;color:var(--t-soft)}
+.dept__note{margin-top:1.4rem;padding:1rem 1.2rem;border-left:2px solid var(--vinaccia);font-size:.92rem;color:var(--t-soft)}
+.dept__note b{color:var(--prugna);font-weight:500}
+@media(max-width:900px){.dept .wrap{grid-template-columns:1fr}.dept:nth-of-type(even) .dept__media{order:0}.dept__media{max-width:560px}}
+
+/* griglia reparti in home */
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.rgrid a{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;display:block;color:var(--porcellana);isolation:isolate}
+.rgrid a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.rgrid a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(34,20,23,0) 40%,rgba(34,20,23,.72));z-index:1}
+.rgrid a:hover img{transform:scale(1.06)}
+.rgrid .t{position:absolute;left:1.2rem;right:1.2rem;bottom:1.1rem;z-index:2}
+.rgrid .t b{display:block;font-family:"Zodiak",serif;font-weight:400;font-size:1.5rem;line-height:1.1}
+.rgrid .t span{display:block;font-size:.84rem;opacity:.8;margin-top:.3rem}
+.rgrid a.wide{grid-column:span 2;aspect-ratio:auto}
+.rgrid a.wide .t b{font-size:1.9rem}
+.rgrid .arrow{position:absolute;right:1rem;top:1rem;z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid rgba(246,240,237,.45);display:grid;place-items:center;transition:.35s}
+.rgrid a:hover .arrow{background:var(--porcellana);color:var(--prugna)}
+@media(max-width:900px){.rgrid{grid-template-columns:1fr 1fr}}
+
+/* faq / accordion */
+.faq{display:grid;gap:0}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;font-family:"Zodiak",serif;font-size:1.25rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.4s var(--ease);font-style:normal}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--vinaccia);border-color:var(--vinaccia);color:var(--porcellana)}
+.faq details p{padding:0 0 1.3rem;color:var(--t-soft);max-width:60ch;font-size:.96rem}
+.on-dark .faq details{border-color:var(--line-d)}.on-dark .faq summary i{border-color:var(--line-d)}.on-dark .faq details p{color:var(--t-porc-soft)}
+
+/* passi (come funziona) */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.step{padding:1.6rem 1.5rem;border-radius:16px;background:var(--porcellana-2)}
+.on-dark .step{background:rgba(246,240,237,.06)}
+.step b{display:block;font-family:"Zodiak",serif;font-weight:400;font-size:2rem;color:var(--vinaccia);line-height:1}
+.on-dark .step b{color:var(--cipria)}
+.step h3{font-weight:500;font-size:1.05rem;margin-top:.9rem}
+.step p{margin-top:.4rem;font-size:.93rem;color:var(--t-soft)}
+.on-dark .step p{color:var(--t-porc-soft)}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+
+/* galleria */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gal .im{border-radius:14px;aspect-ratio:4/3}
+.gal .im:first-child{grid-column:span 2;aspect-ratio:auto}
+@media(max-width:800px){.gal{grid-template-columns:1fr 1fr}.gal .im:first-child{grid-column:span 2}}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.team div{padding:1.5rem;border-radius:16px;background:var(--porcellana-2)}
+.team i{display:block;width:56px;height:56px;border-radius:50%;background:var(--cipria);color:var(--vino);font-style:normal;font-family:"Zodiak",serif;font-size:1.4rem;display:grid;place-items:center;margin-bottom:1rem}
+.team b{display:block;font-weight:500}
+.team span{font-size:.86rem;color:var(--t-soft)}
+@media(max-width:800px){.team{grid-template-columns:1fr 1fr}}
+
+/* cta band */
+.band{padding:clamp(3.6rem,6vw,5.5rem) 0;background:var(--vino);color:var(--porcellana);position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;width:50vw;height:50vw;max-width:700px;max-height:700px;border-radius:50%;background:radial-gradient(circle,rgba(167,84,90,.5),transparent 62%);left:-15%;top:-40%;pointer-events:none}
+.band .wrap{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.6rem}
+.band h2{font-size:clamp(1.9rem,3.6vw,2.8rem);max-width:20ch}
+.band p{color:var(--t-porc-soft);margin-top:.5rem;max-width:48ch}
+.band__cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.band .btn--ghost{color:var(--porcellana);border-color:var(--line-d)}
+.band .btn--ghost::before{background:var(--porcellana)}
+.band .btn--ghost:hover{color:var(--prugna)}
+
+/* corsi lista */
+.clist{display:grid;gap:0}
+.cl{display:grid;grid-template-columns:7rem 1fr auto;gap:1.4rem;align-items:center;padding:1.4rem 0;border-top:1px solid var(--line)}
+.cl:last-child{border-bottom:1px solid var(--line)}
+.cl small{font-size:.82rem;color:var(--vinaccia);font-weight:500}
+.cl h3{font-family:"Zodiak",serif;font-weight:400;font-size:1.35rem}
+.cl p{font-size:.92rem;color:var(--t-soft);margin-top:.3rem}
+.cl .dur{font-size:.84rem;color:var(--t-soft);white-space:nowrap}
+@media(max-width:700px){.cl{grid-template-columns:1fr}.cl .dur{justify-self:start}}
+
+.sec{padding:clamp(4.2rem,7.5vw,7rem) 0}
+.sec--alt{background:var(--porcellana-2)}
+.sec--dark{background:var(--prugna);color:var(--porcellana)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+.credit{font-size:.74rem;color:var(--t-soft);text-align:center;padding:.6rem 0 0}
+
+</style>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="cp-mark" viewBox="0 0 678 444"><path fill="currentColor" d="M499.4,285.1c18.4,11.8,37.1,25.1,57.6,31c11.7,3.4,23.7-4,27.1-15.7c2-6.9,1.3-9.5,3-15.4 c1.4-5.1,6.9,1.9,9.8-8.2c1.9-6.5-4.6-7.1-3.6-10.6c1.5-5.3,18.9-0.4,21.7-9.1c1.6-4.8-2.8-8-1.4-12.9c1.8-6.2,20.3-3.3,22.8-13.3 c2.7-11-11.5-33.6-14.9-48.4c1.5,0.3,3,0.5,5,0.7c10,0.9,16.4-0.6,25.1-5.5c-10.1,3.3-16.8,3.7-27.2,1.5c-1.4-0.3-2.5-0.6-3.6-0.9 c-0.1-1.6,0-3.1,0.4-4.4c1.6-5.5,7.5-7.6,14.9-16.3c14.7-6.2,24.3-16.4,31.2-32.6c13.7-32.4-7.5-69.6-37.4-83.1 c-13.4-12-30.6-21.5-50.1-26.7C559.9,7.7,534.9,4,504.8,4c-45.5,0-84.7,5.7-117.4,17.2c-18.3,6.2-34.8,13.2-49.5,21.1 c-3-5.6-6.7-10.7-11.1-15.4C315.2,14.1,298,7.8,275,7.8c-27.7,0-54.3,6.2-79.8,18.5C170.1,38.6,146.7,55,125,75.4 c-21.3,20-40.4,43-57.5,68.9c-16.6,26-30,52.6-40.2,79.8c-9.8,26.8-16.2,53.2-19.1,79.1c-2.6,26-0.6,49.2,5.7,69.6 c6.8,20,18.5,36.2,35.1,48.5c17,12.3,40,18.5,68.9,18.5c14,0,29.6-2.8,46.6-8.3c17.4-6,35.5-15.3,54.3-28.1 c18.7-12.8,37.5-29.4,56.2-49.8c3.6-3.9,7.2-7.9,10.8-12.1l-46.5,95.1h95.1l64.1-132.1c29.4-0.2,56.8-4.5,82.1-12.8 C487,289.8,493.3,287.6,499.4,285.1z M662.5,120.9c-4.6,10.9-10.4,18.8-18.4,24.7c4.1-7.4,8.4-17.4,12.4-31.4 c7.2-24.9-3.9-51.5-25.7-71.5C655.4,56.9,675.2,91.1,662.5,120.9z M623.1,114.9c15.2-27.7,5.4-62.3-22-77.9 c31.1,15.7,43.7,53.8,28,84.9c-13.8,27.2-41.2,40-70.9,33l4-11C588,148.6,610.4,138,623.1,114.9z M451.8,270.8 c-16.3,12.4-31.9,19.2-46.8,20.3L527.8,37.8l-100.2,14L294.3,324.3c-5.1,5.7-10.2,11.3-15.4,16.7c-17.9,17.9-35.7,33.2-53.6,46 c-17.9,12.8-35.3,22.6-52.3,29.4c-16.6,6.4-32.1,9.6-46.6,9.6c-15.3,0-26.2-5.7-32.6-17.2c-6-11.5-8.7-26.6-8.3-45.3 c0.9-19.1,4.7-40.9,11.5-65.1c6.8-24.3,15.3-48.9,25.5-74c10.2-25.1,21.7-49.8,34.5-74c12.8-24.3,25.8-45.7,38.9-64.5 c13.6-19.1,26.6-34.5,38.9-46c12.8-11.5,24-17.2,33.8-17.2c5.1,0,8.1,4,8.9,12.1c0.8,7.7-0.2,17.7-3.2,30 c-2.6,12.3-7,26.4-13.4,42.1c-6,15.3-13.4,30.9-22.3,46.6c-8.5,15.7-18.3,30.6-29.4,44.7c-10.6,14-21.9,26-33.8,35.7 c26.8,5.5,51.1,3.8,72.8-5.1c8.9-3.6,17.3-7.9,25-12.7c10.8,7.1,24.8,10.3,42,9.6c-2.1-4.3-2.6-12.3-1.3-24.3 c1.5-10.6,4.2-22.3,8.2-35.1c6.5-10.3,11.9-21.2,16.1-32.7c1.8-5,3.3-9.9,4.6-14.7c1.4-2.5,2.8-5,4.3-7.5 c9.8-17,21.9-32.6,36.4-46.6c14.9-14,32.3-25.5,52.3-34.5c20-9.4,43-14,68.9-14c23.4,0,39.4,6.8,47.9,20.4 c8.5,13.6,11.5,30.6,8.9,51.1c-2.1,20.4-8.7,42.6-19.8,66.4c-10.6,23.4-23.8,45.3-39.6,65.7C486.9,240.2,470.1,257.2,451.8,270.8z"/></symbol></svg>
+<div class="progress" id="progress"></div>
+<div class="topbar"><div class="wrap">
+  <div class="topbar__l"><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Viale Dante Alighieri 9, Lecco</span><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lun–Sab 9.00–12.30 · 14.30–19.00</span></div>
+  <div class="topbar__r"><span><b>4,3</b> su Google · 63 recensioni</span><a href="tel:0341365159"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0341 365159</a></div>
+</div></div>
+<header class="nav" id="nav"><div class="wrap">
+  <a href="index.html" class="brand" aria-label="Casa del Parrucchiere"><svg><use href="#cp-mark"/></svg><span>Casa del Parrucchiere<small>Lecco · dal 1970</small></span></a>
+  <nav class="nav__links" aria-label="Principale"><a href="prodotti.html">Prodotti</a><a href="parrucche.html">Parrucche</a><a href="professionisti.html">Professionisti</a><a href="corsi.html">Corsi</a><a href="chi-siamo.html">Chi siamo</a></nav>
+  <div class="nav__right"><a href="contatti.html" class="btn" data-mag>Come arrivare <svg width="15" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13m0 0L9 1m5 5L9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a><button class="burger" id="burger" aria-label="Apri menu"><span></span></button></div>
+</div></header>
+<div class="mmenu" id="mmenu">
+  <div class="mmenu__top"><span class="brand"><svg><use href="#cp-mark"/></svg><span>Casa del Parrucchiere<small>Lecco · dal 1970</small></span></span><button class="burger burger--x" id="mclose" aria-label="Chiudi menu"><span></span></button></div>
+  <nav><a href="prodotti.html">Prodotti</a><a href="parrucche.html">Parrucche</a><a href="professionisti.html">Professionisti</a><a href="corsi.html">Corsi</a><a href="chi-siamo.html">Chi siamo</a><a href="contatti.html">Contatti</a></nav>
+  <div class="mmenu__foot"><span>Viale Dante Alighieri 9, 23900 Lecco</span><a href="tel:0341365159">0341 365159</a><span>Lun–Sab 9.00–12.30 · 14.30–19.00</span></div>
+</div>
+<section class="phero"><div class="wrap">
+  <div class="rv-l"><div class="phero__crumb"><a href="index.html">Home</a><i></i><span>Professionisti</span></div><h1 class="f-disp">Il fornitore del tuo salone, a dieci minuti dalla poltrona.</h1><p class="lead">Dal 1970 riforniamo parrucchieri, centri estetici e barber shop di Lecco e provincia. Le linee professionali, il monouso, l'attrezzatura: e qualcuno che risponde al telefono.</p><div class="phero__cta"><a href="contatti.html" class="btn" data-mag>Chiedi le condizioni<svg width="15" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13m0 0L9 1m5 5L9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a><a href="tel:0341365159" class="btn btn--ghost" data-mag>Chiama</a></div></div>
+  <div class="rv-r" style="--d:.2s"><div class="phero__media im" data-prlx><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1400&q=72" alt="" loading="lazy" decoding="async"></div></div>
+</div></section>
+<section class="sec sec--alt"><div class="wrap">
+  <div class="sec-head rv"><span class="kicker">Cosa offriamo</span><h2 class="f-disp">Quattro cose che fanno la differenza a fine mese.</h2></div>
+  <div class="steps" style="grid-template-columns:repeat(4,1fr)">
+    <div class="step rv"><b>01</b><h3>Offerte su quantità</h3><p>Condizioni dedicate sul monouso, sui consumabili e sulle linee professionali. Più ordini, meglio spendi.</p></div>
+    <div class="step rv" style="--d:.08s"><b>02</b><h3>Marchi in esclusiva</h3><p>Distribuiamo linee riservate ai professionisti che in zona trovi solo da noi.</p></div>
+    <div class="step rv" style="--d:.16s"><b>03</b><h3>Arredo del salone</h3><p>Progettiamo arredamenti per saloni, centri estetici e barber shop: layout, poltrone, lavaggi, postazioni.</p></div>
+    <div class="step rv" style="--d:.24s"><b>04</b><h3>Formazione</h3><p>Corsi e workshop in negozio, con attestato e kit: unghie, ciglia, barba, taglio, make-up.</p></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap"><div class="two">
+  <div class="rv-l"><div class="dept__media im im--warm" data-prlx><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=72" alt="Salone" loading="lazy" decoding="async"></div></div>
+  <div class="rv-r">
+    <span class="kicker">Per chi</span>
+    <h2 class="f-disp" style="font-size:clamp(2rem,4vw,3.1rem)">Parrucchieri, estetiste, barbieri, onicotecniche.</h2>
+    <p class="lead" style="margin-top:1rem">Ognuno ha le sue linee e i suoi consumi. Ti prepariamo un listino sulle referenze che usi davvero, non un catalogo generico.</p>
+    <div class="faq" style="margin-top:1.6rem">
+      <details><summary>Saloni di parrucchieri<i>+</i></summary><p>Colore, trattamenti, styling, attrezzatura e ricambi. Le linee L'Oréal, Wella, Redken, Matrix, Kérastase, Lisap, Medavita e altre venti.</p></details>
+      <details><summary>Centri estetici<i>+</i></summary><p>Monouso, cere, trattamenti viso e corpo, macchinari. Peggy Sage, Muster & Dikson, Byothea, Ro.ial. Offerte su quantità.</p></details>
+      <details><summary>Barber shop<i>+</i></summary><p>Rasatura tradizionale e styling: Proraso, Floid, Cella, Wahl, Barbicide. Tosatrici e ricambi.</p></details>
+      <details><summary>Onicotecniche<i>+</i></summary><p>Gel, acrilico, semipermanente, frese e lampade. Layla, CLD, Trebosi, Focus Nails. Corsi di aggiornamento in negozio.</p></details>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="sec sec--alt"><div class="wrap"><div class="two">
+  <div class="rv-l">
+    <span class="kicker">Richiedi le condizioni</span>
+    <h2 class="f-disp" style="font-size:clamp(2rem,4vw,3.1rem)">Dicci cosa usi. Ti rispondiamo con i numeri.</h2>
+    <p class="lead" style="margin-top:1rem">Compila il modulo con il tipo di attività e le linee che usi: ti mandiamo un listino dedicato entro un giorno lavorativo.</p>
+    <div class="con__block" style="margin-top:2rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><b>Preferisci parlare?</b><a class="tel" href="tel:0341365159">0341 365159</a></div></div>
+  </div>
+  <div class="rv-r"><form class="form" novalidate><div class="body">
+  <h3>Richiesta listino professionale</h3><p class="lead">Tipo di attività, linee che usi, volumi indicativi: più dettagli ci dai, più preciso è il listino.</p>
+  <div class="row"><div class="field"><label>Nome</label><input name="nome" required></div><div class="field"><label>Telefono</label><input name="telefono" type="tel" required></div></div>
+  <div class="row one"><div class="field"><label>Email</label><input name="email" type="email" required></div></div>
+  <div class="row one"><div class="field"><label>Di cosa hai bisogno</label><select name="argomento"><option>Salone parrucchiere</option><option>Centro estetico</option><option>Barber shop</option><option>Onicotecnica / nail salon</option><option>Arredo salone</option><option>Altro</option></select></div></div>
+  <div class="row one"><div class="field"><label>Messaggio</label><textarea name="messaggio"></textarea></div></div>
+  <button type="submit" class="btn" data-mag>Invia la richiesta <svg width="15" height="11" viewBox="0 0 16 12" fill="none"><path d="M1 6h13m0 0L9 1m5 5L9 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  <small>Inviando accetti l'informativa sulla privacy. Nessuna newsletter, solo la risposta alla tua richiesta.</small>
+</div><div class="ok"><b>Richiesta inviata.</b><p class="lead" style="margin-inline:auto">Ti richiamiamo o ti scriviamo entro oggi. Se hai fretta, il telefono è sempre 0341 365159.</p></div></form></div>
+</div></div></section>
+<footer class="foot"><div class="wrap">
+  <div class="foot__top">
+    <div><a href="index.html" class="brand" aria-label="Casa del Parrucchiere"><svg><use href="#cp-mark"/></svg><span>Casa del Parrucchiere<small>Lecco · dal 1970</small></span></a><p>Prodotti professionali e corsi per capelli, estetica, unghie, parrucche, profumeria e barba. Per professionisti e per chi ama prendersi cura di sé.</p></div>
+    <div><h4>Negozio</h4><ul><li>Viale Dante Alighieri 9</li><li>23900 Lecco (LC)</li><li><a href="tel:0341365159">0341 365159</a></li><li><a href="https://www.facebook.com/casadelparrucchierelecco/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+    <div><h4>Esplora</h4><ul><li><a href="prodotti.html">Prodotti</a></li><li><a href="parrucche.html">Parrucche</a></li><li><a href="professionisti.html">Professionisti</a></li><li><a href="corsi.html">Corsi</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul></div>
+  </div>
+  <div class="foot__bot"><span>© <span id="yr"></span> Casa del Parrucchiere SAS di Manzoni Andrea · P.I. 00240390138</span><span><a href="#">Privacy e cookie</a></span></div>
+  <p class="credit">Foto dimostrative: Unsplash License. Da sostituire con le foto del negozio.</p>
+</div></footer>
+<script>
+(function(){
+  "use strict";
+  var d=document,w=window,$=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return [].slice.call((c||d).querySelectorAll(s))};
+  var reduce=w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine=w.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var prl=$$('[data-prlx]');
+
+  /* intro (solo home) */
+  var intro=$('#intro'),hero=$('#hero');
+  function startHero(){if(hero)hero.classList.add('go')}
+  function killIntro(){if(!intro||intro.classList.contains('done'))return;intro.classList.add('done');startHero();setTimeout(function(){intro.classList.add('gone')},1100)}
+  if(intro){
+    if(reduce||sessionStorage.getItem('cdp-intro')){intro.classList.add('gone');startHero()}
+    else{sessionStorage.setItem('cdp-intro','1');w.addEventListener('load',function(){setTimeout(killIntro,1500)});setTimeout(killIntro,2800)}
+  }else startHero();
+
+  /* titolo hero parola per parola */
+  var h1=$('#heroH1');
+  if(h1){var words=h1.textContent.trim().split(/\s+/);h1.innerHTML=words.map(function(t,i){return '<span class="w"><i style="transition-delay:'+(0.08*i)+'s">'+t+'</i></span>'}).join(' ')}
+
+  /* nav */
+  var nav=$('#nav'),prog=$('#progress');
+  function onScroll(){var y=w.scrollY;if(nav)nav.classList.toggle('scrolled',y>20);if(prog){var h=d.documentElement.scrollHeight-w.innerHeight;prog.style.width=(h>0?y/h*100:0)+'%'}prlx();subnav()}
+  w.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* pagina corrente */
+  var here=location.pathname.split('/').pop()||'index.html';
+  $$('.nav__links a').forEach(function(a){if(a.getAttribute('href')===here)a.classList.add('cur')});
+
+  /* mobile menu */
+  var mm=$('#mmenu'),bg=$('#burger'),mc=$('#mclose');
+  if(mm&&bg){bg.addEventListener('click',function(){mm.classList.add('open')});mc.addEventListener('click',function(){mm.classList.remove('open')});$$('a',mm).forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open')})})}
+
+  /* reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  $$('.rv,.rv-l,.rv-r').forEach(function(el){io.observe(el)});
+
+  /* contatori */
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,end=+el.dataset.count,t0=null;cio.unobserve(el);
+    if(el.hasAttribute('data-plain')||reduce){el.textContent=el.dataset.count;return}
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1400,1);p=1-Math.pow(1-p,3);el.textContent=Math.round(end*p);if(p<1)requestAnimationFrame(step)}
+    requestAnimationFrame(step)})},{threshold:.6});
+  $$('[data-count]').forEach(function(el){cio.observe(el)});
+
+  /* parallax leggero sulle immagini */
+  function prlx(){if(reduce||!fine)return;prl.forEach(function(el){var r=el.getBoundingClientRect();if(r.bottom<0||r.top>w.innerHeight)return;var c=(r.top+r.height/2-w.innerHeight/2)/w.innerHeight;var m=el.querySelector('img');if(m)m.style.transform='translateY('+(c*-22)+'px) scale(1.08)'})}
+
+  /* reparti interattivi (home) */
+  var items=$$('.rep__it'),phs=$$('#repFrame .im'),cnt=$('#repCount');
+  if(items.length){
+    function sel(i){items.forEach(function(it,k){it.classList.toggle('on',k===i)});phs.forEach(function(p,k){p.classList.toggle('on',k===i)});if(cnt)cnt.textContent=(i+1)+' / '+items.length}
+    items.forEach(function(it){var i=+it.dataset.i;it.addEventListener('mouseenter',function(){if(fine)sel(i)});it.addEventListener('click',function(e){if(e.target.closest('a'))return;sel(i)});it.addEventListener('focus',function(){sel(i)})});
+  }
+
+  /* marchi marquee */
+  var B1=['L\'Oréal Professionnel','Kérastase','Redken','Wella','Matrix','Moroccanoil','Lisap','Medavita','Nook','Kadus','Barex','Rica','Crazy Color','Manic Panic','Ecru','Nika'];
+  var B2=['Chanel','Dior','Hermès','Yves Saint Laurent','Gucci','Prada','Guerlain','Lancôme','Sisley','Clarins','Collistar','Bulgari','Fendi','Versace','Dolce & Gabbana','Shiseido'];
+  var B3=['ghd','BaByliss Pro','Parlux','Gamma Più','Wahl','Corioliss','Proraso','Floid','Cella','Wilkinson','Peggy Sage','Muster & Dikson','Byothea','Layla','Podorape','Barbicide'];
+  function fill(id,arr){var el=d.getElementById(id);if(!el)return;var html=arr.map(function(b){return '<span>'+b+'</span>'}).join('');el.innerHTML=html+html}
+  fill('mq1',B1);fill('mq2',B2);fill('mq3',B3);
+
+  /* orari: evidenzia oggi + pill aperto/chiuso */
+  var now=new Date(),day=now.getDay(),mins=now.getHours()*60+now.getMinutes();
+  var row=$('#hours [data-d="'+day+'"]');if(row)row.classList.add('today');
+  var open=false,txt='';
+  if(day>=1&&day<=6){if(mins>=540&&mins<750){open=true;txt='Aperto ora · chiude alle 12.30'}else if(mins>=870&&mins<1140){open=true;txt='Aperto ora · chiude alle 19.00'}else if(mins<540){txt='Chiuso · apre alle 9.00'}else if(mins<870){txt='In pausa · riapre alle 14.30'}else{txt='Chiuso · riapre domani alle 9.00'}}
+  else{txt='Chiuso · riapre lunedì alle 9.00'}
+  $$('.openpill').forEach(function(p){p.querySelector('span').textContent=txt;if(!open)p.querySelector('i').style.background='#D9A0A5'});
+
+  /* subnav ancore */
+  var sub=$$('.subnav a'),secs=sub.map(function(a){return $(a.getAttribute('href'))});
+  function subnav(){if(!sub||!sub.length)return;var y=w.scrollY+180,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});sub.forEach(function(a,i){a.classList.toggle('cur',i===cur)})}
+
+  /* magnetici */
+  if(fine&&!reduce){$$('[data-mag]').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})})}
+
+  /* form (demo: nessun invio reale) */
+  $$('form.form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var ok=true;$$('[required]',f).forEach(function(i){var v=i.value.trim();var bad=!v||(i.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));i.style.borderColor=bad?'#A7545A':'';if(bad)ok=false});if(ok)f.classList.add('sent')})});
+
+  $$('#yr').forEach(function(y){y.textContent=now.getFullYear()});
+})();
+
+</script>
+</body></html>
