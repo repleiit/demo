@@ -8,3 +8,4 @@ Deploy su repleiit/demo (GitHub Pages):
 2. Commit → URL: https://repleiit.github.io/demo/casa-del-parrucchiere/
 
 `index.html` è la home. Tutti i link sono relativi, quindi funziona anche in sottocartella.
+
