@@ -498,6 +498,20 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
 .lg:hover{background:var(--vinaccia);opacity:1;transform:translateY(-2px)}
 .lgrid .lg{height:28px;max-width:120px}
 
+/* ---------- anti scroll orizzontale mobile ---------- */
+html,body{overflow-x:hidden;max-width:100%}
+body{position:relative}
+.wrap{max-width:100%}
+.con__grid>*,.two>*,.con__block>div,.pro__grid>*,.rep__grid>*,.storia__grid>*,.dept .wrap>*,.hero .wrap>*,.par .wrap>*,.phero .wrap>*,.rec__head>*,.corsi__grid>*,.steps>*,.tl__i>div,.par__pt>div{min-width:0}
+.hours div{flex-wrap:wrap}
+.hours span:last-child{white-space:nowrap}
+.mmenu{width:100%;left:auto;right:0;max-width:100vw}
+.steps--4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.steps--4{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.steps--4{grid-template-columns:1fr}}
+
+@media(max-width:900px){html.js .rv-l,html.js .rv-r{transform:translateY(28px)}html.js .rv-l.in,html.js .rv-r.in{transform:none}}
+
 </style>
 <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
 </head>
@@ -524,7 +538,7 @@ html.no-js .hero h1 .w i,.hero.go h1 .w i{transform:none}
 </div></section>
 <section class="sec sec--alt"><div class="wrap">
   <div class="sec-head rv"><span class="kicker">Cosa offriamo</span><h2 class="f-disp">Quattro cose che fanno la differenza a fine mese.</h2></div>
-  <div class="steps" style="grid-template-columns:repeat(4,1fr)">
+  <div class="steps steps--4">
     <div class="step rv"><b>01</b><h3>Offerte su quantità</h3><p>Condizioni dedicate sul monouso, sui consumabili e sulle linee professionali. Più ordini, meglio spendi.</p></div>
     <div class="step rv" style="--d:.08s"><b>02</b><h3>Marchi in esclusiva</h3><p>Distribuiamo linee riservate ai professionisti che in zona trovi solo da noi.</p></div>
     <div class="step rv" style="--d:.16s"><b>03</b><h3>Arredo del salone</h3><p>Progettiamo arredamenti per saloni, centri estetici e barber shop: layout, poltrone, lavaggi, postazioni.</p></div>
